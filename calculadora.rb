@@ -12,36 +12,44 @@ loop do
   opcao = gets.chomp.to_i
 
   case opcao
-    when opcao = 1
-        print "Digite o primeiro número: "
-        numero1 = gets.chomp.to_i
-        print "Digite o segundo número: "
-        numero2 = gets.chomp.to_i
-        adicao = numero1 + numero2
-        puts adicao
-    when opcao = 2
-        print "Digite o primeiro número: "
-        numero1 = gets.chomp.to_i
-        print "Digite o segundo número: "
-        numero2 = gets.chomp.to_i
-        subtracao = numero1 - numero2
-        puts subtracao
-    when opcao = 3
-        print "Digite o primeiro número: "
-        numero1 = gets.chomp.to_i
-        print "Digite o segundo número: "
-        numero2 = gets.chomp.to_i
-        mult = numero1 * numero2
-        puts mult
-    when opcao = 4
-        print "Digite o primeiro número: "
-        numero1 = gets.chomp.to_i
-        print "Digite o segundo número: "
-        numero2 = gets.chomp.to_i
-        div = numero1 / numero2
-        puts div
-    when opcao = 0
-        break
-     end
-  system "clear"
+  when 1
+    print 'Digite o primeiro número: '
+    numero1 = gets.chomp.to_i
+    print 'Digite o segundo número: '
+    numero2 = gets.chomp.to_i
+    adicao = numero1 + numero2
+    puts "Resultado da adição: #{adicao}"
+  when 2
+    print 'Digite o primeiro número: '
+    numero1 = gets.chomp.to_i
+    print 'Digite o segundo número: '
+    numero2 = gets.chomp.to_i
+    subtracao = numero1 - numero2
+    puts "Resultado da subtração: #{subtracao}"
+  when 3
+    print 'Digite o primeiro número: '
+    numero1 = gets.chomp.to_i
+    print 'Digite o segundo número: '
+    numero2 = gets.chomp.to_i
+    mult = numero1 * numero2
+    puts "Resultado da multiplicação: #{mult}"
+  when 4
+    print 'Digite o primeiro número: '
+    numero1 = gets.chomp.to_i
+    print 'Digite o segundo número: '
+    numero2 = gets.chomp.to_i
+    if numero2 != 0
+      div = numero1 / numero2
+      puts "Resultado da divisão: #{div}"
+    else
+      puts "Não é possível dividir por zero."
+    end
+  when 0
+    break
+  else
+    puts 'Opção inválida. Escolha uma opção válida.'
+  end
+  puts "Pressione ENTER para realizar uma nova operação."
+  gets.chomp  # Espera o usuário pressionar Enter para continuar
+  system 'clear'
 end
